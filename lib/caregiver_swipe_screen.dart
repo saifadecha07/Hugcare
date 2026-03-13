@@ -59,12 +59,35 @@ class _CaregiverSwipeScreenState extends State<CaregiverSwipeScreen> {
           content: Text(
             'ระบบได้ยืนยันการนัดหมายกับ "คุณ ${_caregivers[_currentIndex].name}" เรียบร้อยแล้วครับ',
           ),
+          actionsAlignment:
+              MainAxisAlignment.spaceBetween, // จัดให้ปุ่มอยู่ห่างกัน ซ้าย-ขวา
           actions: [
+            // ปุ่มกลับหน้าหลัก (ปุ่มรอง)
+            TextButton(
+              onPressed: () {
+                // คำสั่ง popUntil จะปิดหน้าต่างที่ซ้อนกันอยู่ทั้งหมด จนกว่าจะถึงหน้าแรกสุด (MainScreen)
+                Navigator.popUntil(context, (route) => route.isFirst);
+              },
+              child: const Text(
+                'กลับหน้าหลัก',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+
+            // ปุ่มไปหน้า Tracking (ปุ่มหลัก)
             ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
               onPressed: () {
                 Navigator.pop(context); // ปิดหน้าต่าง Pop-up
-                // ใช้ pushReplacement เพื่อไปหน้า Tracking แบบกดย้อนกลับมาหน้าปัดไม่ได้อีก
+                // เปลี่ยนหน้าไป Tracking
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
@@ -75,8 +98,11 @@ class _CaregiverSwipeScreenState extends State<CaregiverSwipeScreen> {
                 );
               },
               child: const Text(
-                'ดูสถานะการเดินทาง',
-                style: TextStyle(color: Colors.white),
+                'ดูสถานะ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],
@@ -111,7 +137,7 @@ class _CaregiverSwipeScreenState extends State<CaregiverSwipeScreen> {
             child: PageView.builder(
               controller: _pageController,
               physics:
-                  const NeverScrollableScrollPhysics(), // ปิดการใช้คิ้วปัด เพื่อบังคับให้กดปุ่ม (หรือเปิดไว้ถ้าอยากให้เอานิ้วปัดได้)
+                  const NeverScrollableScrollPhysics(), // (หรือเปิดไว้ถ้าอยากให้เอานิ้วปัดได้)
               onPageChanged: (index) {
                 setState(() {
                   _currentIndex = index;
@@ -186,7 +212,7 @@ class _CaregiverSwipeScreenState extends State<CaregiverSwipeScreen> {
               Icons.person,
               size: 150,
               color: Colors.white,
-            ), // แทนที่ด้วย Image.network ได้
+            ), // แทนที่ด้วย Image.network
           ),
 
           // ป้ายราคามุมขวาบน

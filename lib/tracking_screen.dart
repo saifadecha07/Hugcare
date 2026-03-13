@@ -4,7 +4,6 @@ import 'chat_screen.dart';
 class TrackingScreen extends StatelessWidget {
   final String caregiverName;
 
-  // รับชื่อ Caregiver ที่จับคู่ได้มาแสดง
   const TrackingScreen({super.key, required this.caregiverName});
 
   @override
@@ -17,12 +16,18 @@ class TrackingScreen extends StatelessWidget {
           style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.white,
-        iconTheme: const IconThemeData(color: Colors.black87),
         elevation: 1,
+        // จุดที่ 1: ดักปุ่ม Back มุมซ้ายบน ให้ล้างหน้าจอทั้งหมดและกลับไปหน้าแรก (Home)
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.black87),
+          onPressed: () {
+            Navigator.popUntil(context, (route) => route.isFirst);
+          },
+        ),
       ),
       body: Column(
         children: [
-          // ส่วนบน: แผนที่จำลอง (ในแอปจริงต้องต่อ Google Maps API)
+          // ส่วนบน: แผนที่จำลอง
           Expanded(
             flex: 2,
             child: Container(
@@ -48,7 +53,8 @@ class TrackingScreen extends StatelessWidget {
 
           // ส่วนล่าง: ข้อมูล Caregiver และ Timeline สถานะ
           Expanded(
-            flex: 3,
+            flex:
+                4, // ปรับ flex ให้พื้นที่ส่วนล่างกว้างขึ้นนิดหน่อยเพื่อรองรับปุ่มใหม่
             child: Container(
               padding: const EdgeInsets.all(24),
               decoration: const BoxDecoration(
@@ -121,30 +127,13 @@ class TrackingScreen extends StatelessWidget {
                             color: Colors.green,
                           ),
                           onPressed: () {
-                            // TODO: เปลี่ยนไปหน้าห้องแชท
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Colors.green.shade50,
-                                shape: BoxShape.circle,
-                              ),
-                              child: IconButton(
-                                icon: const Icon(
-                                  Icons.chat_bubble,
-                                  color: Colors.green,
-                                ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => ChatScreen(
-                                        caregiverName: caregiverName,
-                                      ),
-                                    ),
-                                  );
-                                },
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    ChatScreen(caregiverName: caregiverName),
                               ),
                             );
-                            print('แชทกับ $caregiverName');
                           },
                         ),
                       ),
@@ -173,6 +162,33 @@ class TrackingScreen extends StatelessWidget {
                           isLast: true,
                         ),
                       ],
+                    ),
+                  ),
+
+                  // จุดที่ 2: เพิ่มปุ่ม "กลับหน้าหลัก" ไว้ด้านล่างสุด
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () {
+                        // คำสั่งล้างหน้าจอและกลับหน้าแรกสุด
+                        Navigator.popUntil(context, (route) => route.isFirst);
+                      },
+                      style: OutlinedButton.styleFrom(
+                        side: const BorderSide(color: Colors.green, width: 2),
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: const Text(
+                        'กลับหน้าหลัก',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                 ],
