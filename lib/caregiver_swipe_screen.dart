@@ -38,14 +38,48 @@ class _CaregiverSwipeScreenState extends State<CaregiverSwipeScreen> {
         curve: Curves.easeInOut,
       );
     } else {
-      // ถ้าปัดหมดแล้ว ให้ไปหน้าสรุปผล
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('คัดเลือกเสร็จสิ้น! กำลังไปหน้าสรุป...')),
-      );
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const TrackingScreen(caregiverName: 'ตั้น'),
+      // โชว์ Pop-up ว่าแมตช์สำเร็จ!
+      showDialog(
+        context: context,
+        barrierDismissible: false, // บังคับให้ต้องกดปุ่มในกรอบ
+        builder: (context) => AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          title: const Row(
+            children: [
+              Icon(Icons.check_circle, color: Colors.green),
+              SizedBox(width: 8),
+              Text(
+                'คัดเลือกสำเร็จ!',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          content: Text(
+            'ระบบได้ยืนยันการนัดหมายกับ "คุณ ${_caregivers[_currentIndex].name}" เรียบร้อยแล้วครับ',
+          ),
+          actions: [
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              onPressed: () {
+                Navigator.pop(context); // ปิดหน้าต่าง Pop-up
+                // ใช้ pushReplacement เพื่อไปหน้า Tracking แบบกดย้อนกลับมาหน้าปัดไม่ได้อีก
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TrackingScreen(
+                      caregiverName: _caregivers[_currentIndex].name,
+                    ),
+                  ),
+                );
+              },
+              child: const Text(
+                'ดูสถานะการเดินทาง',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
         ),
       );
     }
