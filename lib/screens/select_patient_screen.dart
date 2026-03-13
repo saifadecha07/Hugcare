@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugecare/add_patient_screen.dart';
 
 class SelectPatientScreen extends StatelessWidget {
   final String serviceName;
@@ -39,6 +40,12 @@ class SelectPatientScreen extends StatelessWidget {
               child: ElevatedButton.icon(
                 onPressed: () {
                   // TODO: สร้างฟอร์มกรอกข้อมูล (ชื่อ, อายุ, อาการ)
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AddPatientScreen(),
+                    ),
+                  );
                   print('ไปหน้าฟอร์มเพิ่มข้อมูลใหม่');
                 },
                 icon: const Icon(Icons.add),
