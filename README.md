@@ -8,7 +8,7 @@
 
 ---
 
-## ✨ Features (จุดเด่นของแอปพลิเคชัน)
+##  Features (จุดเด่นของแอปพลิเคชัน)
 
 - **Comprehensive Services:** รองรับบริการหลากหลายรูปแบบ เช่น ดูแลที่บ้าน, พาไปพบแพทย์, ดูแลส่วนตัว, และพาเที่ยว
 - **Patient Profile Management:** ระบบจัดการประวัติผู้รับบริการ (ญาติผู้ใหญ่) พร้อมแบบประเมินสุขภาพเบื้องต้น
@@ -19,7 +19,7 @@
 
 ---
 
-## 📱 Screen Flows & UI Architecture
+##  Screen Flows & UI Architecture
 
 สถาปัตยกรรม UI ของแอปพลิเคชันถูกออกแบบมาในรูปแบบ **Component-based** เพื่อให้ง่ายต่อการขยายผลและบำรุงรักษา:
 
@@ -32,7 +32,7 @@
 
 ---
 
-## 🚀 Getting Started (วิธีการรันโปรเจกต์)
+##  Getting Started (วิธีการรันโปรเจกต์)
 
 **Prerequisites:**
 - ติดตั้ง [Flutter SDK](https://docs.flutter.dev/get-started/install) (เวอร์ชันล่าสุด)
