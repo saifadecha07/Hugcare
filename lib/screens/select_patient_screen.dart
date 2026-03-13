@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hugecare/add_patient_screen.dart';
+import 'package:hugecare/appointment_detail_screen.dart';
 
 class SelectPatientScreen extends StatelessWidget {
   final String serviceName;
@@ -101,6 +102,14 @@ class SelectPatientScreen extends StatelessWidget {
                 ),
                 onTap: () {
                   // TODO: ไปหน้ากำหนดวัน เวลา และสถานที่นัดหมาย
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AppointmentDetailScreen(
+                        patientName: 'คุณ สมภพ',
+                      ),
+                    ),
+                  );
                   print('เลือก คุณ สมภพ');
                 },
               ),
