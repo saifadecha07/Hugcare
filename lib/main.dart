@@ -87,3 +87,129 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
+// ----------------- โค้ดสำหรับแท็บทั้ง 3 -----------------
+
+// 1. หน้าต่างการนัดหมาย (Appointment Tab)
+class AppointmentTab extends StatelessWidget {
+  const AppointmentTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'การนัดหมายของคุณ',
+          style: TextStyle(color: Colors.black87),
+        ),
+        backgroundColor: Colors.white,
+        elevation: 1,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: ListTile(
+              leading: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.teal.shade50,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(Icons.local_hospital, color: Colors.teal),
+              ),
+              title: const Text(
+                'พาไปพบแพทย์',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: const Text(
+                '15 ก.พ. 2026 • 08:30 น.\nโรงพยาบาลธรรมศาสตร์เฉลิมพระเกียรติ',
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+              isThreeLine: true,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// 2. หน้าต่างข้อความ (Chat Tab)
+class ChatTab extends StatelessWidget {
+  const ChatTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('ข้อความ', style: TextStyle(color: Colors.black87)),
+        backgroundColor: Colors.white,
+        elevation: 1,
+      ),
+      body: ListView(
+        children: [
+          ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.green.shade100,
+              child: const Icon(Icons.person, color: Colors.green),
+            ),
+            title: const Text(
+              'คุณ ตั้น (Caregiver)',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            subtitle: const Text('พรุ่งนี้พบกัน 8 โมงเช้านะครับ'),
+            trailing: const Text(
+              '10:11 น.',
+              style: TextStyle(color: Colors.grey, fontSize: 12),
+            ),
+          ),
+          const Divider(height: 1),
+        ],
+      ),
+    );
+  }
+}
+
+// 3. หน้าต่างประวัติการใช้งาน (History Tab)
+class HistoryTab extends StatelessWidget {
+  const HistoryTab({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'ประวัติการใช้งาน',
+          style: TextStyle(color: Colors.black87),
+        ),
+        backgroundColor: Colors.white,
+        elevation: 1,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: [
+          Card(
+            color: Colors.grey.shade50,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: ListTile(
+              leading: const Icon(Icons.check_circle, color: Colors.grey),
+              title: const Text(
+                'ดูแลที่บ้าน (เสร็จสิ้น)',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: const Text('10 ม.ค. 2026 • Caregiver: มายด์'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
