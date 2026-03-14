@@ -4,8 +4,9 @@
 ![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 ![UI/UX](https://img.shields.io/badge/UI%2FUX-Prototype-success?style=for-the-badge)
 
-**HUGCARE (Care with Heart)** คือแอปพลิเคชันต้นแบบ (Prototype) สำหรับการจองและคัดเลือกผู้ดูแล (Caregiver) เพื่อดูแลผู้สูงอายุหรือผู้ป่วย เข้ารอบ 30 team สุดท้าย ของ TU Start up2026
-https://youtu.be/QTJNVsvZN4E
+**HUGCARE (Care with Heart)** คือแอปพลิเคชันต้นแบบ (Prototype) สำหรับการจองและคัดเลือกผู้ดูแล (Caregiver) เพื่อดูแลผู้สูงอายุหรือผู้ป่วย 
+เข้ารอบ 30 team สุดท้าย ของ TU Start up2026
+                  https://youtu.be/QTJNVsvZN4E
 ---
 
 ##  Features (จุดเด่นของแอปพลิเคชัน)
