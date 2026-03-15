@@ -5,8 +5,14 @@
 ![UI/UX](https://img.shields.io/badge/UI%2FUX-Prototype-success?style=for-the-badge)
 
 **HUGCARE (Care with Heart)** คือแอปพลิเคชันต้นแบบ (Prototype) สำหรับการจองและคัดเลือกผู้ดูแล (Caregiver) เพื่อดูแลผู้สูงอายุหรือผู้ป่วย 
-เข้ารอบ 30 team สุดท้าย ของ TU Start up2026
-                  https://youtu.be/QTJNVsvZN4E
+เข้ารอบ 30 team สุดท้าย ของ TU Start up2026<br>
+<details>
+  <summary><b>Click here to view pitching video</b></summary>
+  <br>
+  <p align="center">
+    <img src="https://youtu.be/QTJNVsvZN4E" width="400">
+  </p>
+</details>
 ---
 
 ##  Features (จุดเด่นของแอปพลิเคชัน)
@@ -20,10 +26,20 @@
 ---
 ##  demo 
 <details>
-  <summary><b>Click here to view video</b></summary>
+  <summary><b>Click here to view screenshot</b></summary>
   <br>
   <p align="center">
-    <img src="[https://github.com/user-attachments/assets/5bf5b675-deef-43fd-9a44-12803697937b](https://github.com/user-attachments/assets/3aaf1ada-4adf-43a9-a721-f3c8dd908f02)" width="400">
+    <img src="https://github.com/user-attachments/assets/3aaf1ada-4adf-43a9-a721-f3c8dd908f02" width="400">
+    <img src="https://github.com/user-attachments/assets/075674c1-b4aa-472c-b6d6-fa3b07777d2e" width="400">
+    <img src="https://github.com/user-attachments/assets/acc48882-1561-455b-b50d-7fc0ca389e21" width="400">
+    <img src="https://github.com/user-attachments/assets/bcfbefb6-dbd0-4935-844d-21438585358d" width="400">
+    <img src="https://github.com/user-attachments/assets/df74d089-474c-4895-a02b-b3c6c4cc93e1" width="400">
+    <img src="https://github.com/user-attachments/assets/e7bf1778-fbca-46ff-8eb2-3f8c04c90968" width="400">
+    <img src="https://github.com/user-attachments/assets/c854c8bd-01c2-45ff-b2f2-58bf1f3971e5" width="400">
+    <img src="https://github.com/user-attachments/assets/503149ad-aa01-41eb-b6c7-df8c3774dd16" width="400">
+    <img src="https://github.com/user-attachments/assets/52ccde09-a58d-450b-ba14-c94996a1885d" width="400">
+    <img src="https://github.com/user-attachments/assets/dafdbdb8-86ab-4e81-a7db-50105ddd400b" width="400">
+    <img src="https://github.com/user-attachments/assets/11c17537-3ee5-4c47-b9d5-0ee8f84b754d" width="400">
   </p>
 </details>
 
