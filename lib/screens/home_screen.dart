@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'select_patient_screen.dart'; // ตรวจสอบให้แน่ใจว่าสร้างไฟล์นี้ไว้แล้วนะครับ
+import 'select_patient_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -80,7 +80,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // Grid View สำหรับเมนูบริการทั้ง 4
+              // Grid View
               GridView.count(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -89,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisSpacing: 16,
                 childAspectRatio: 0.9,
                 children: [
-                  // ส่ง context เข้าไปด้วยตามนี้เลยครับ
+                  //  context
                   _buildServiceCard(
                     context,
                     'ดูแลที่บ้าน',
@@ -123,7 +123,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // ฟังก์ชันแยกออกมาอยู่ด้านนอก build method แต่ยังอยู่ในคลาส HomeScreen
+  // build method อยู่ในคลาส HomeScreen
   Widget _buildServiceCard(
     BuildContext context,
     String title,

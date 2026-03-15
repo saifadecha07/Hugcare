@@ -21,7 +21,7 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _messageController = TextEditingController();
 
-  // ข้อความจำลองตอนเปิดหน้าแชทมาครั้งแรก
+  // ข้อความตอนเปิดหน้าแชทมาครั้งแรก
   final List<ChatMessage> _messages = [
     ChatMessage(text: 'สวัสดีครับ 😊', isMe: false),
     ChatMessage(text: 'ขอบคุณที่เลือกใช้บริการผมนะครับ', isMe: false),
@@ -41,7 +41,7 @@ class _ChatScreenState extends State<ChatScreen> {
     // ล้างช่องพิมพ์หลังจากส่งเสร็จ
     _messageController.clear();
 
-    // ตรงนี้ในแอปจริงสามารถใส่ logic ให้บอทตอบกลับอัตโนมัติได้
+    // แอปจริงสามารถใส่ logic ให้บอท
   }
 
   @override

@@ -214,7 +214,7 @@ class _AppointmentDetailScreenState extends State<AppointmentDetailScreen> {
                     );
                     return;
                   }
-                  // TODO: ไปหน้าคัดเลือก Caregiver
+                  // ไปหน้าคัดเลือก Caregiver
                   Navigator.push(
                     context,
                     MaterialPageRoute(

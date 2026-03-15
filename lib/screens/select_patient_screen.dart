@@ -40,7 +40,7 @@ class SelectPatientScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton.icon(
                 onPressed: () {
-                  // TODO: สร้างฟอร์มกรอกข้อมูล (ชื่อ, อายุ, อาการ)
+                  // สร้างฟอร์มกรอกข้อมูล (ชื่อ, อายุ, อาการ)
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -68,7 +68,7 @@ class SelectPatientScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // รายชื่อผู้รับบริการที่เคยบันทึกไว้ (ข้อมูลจำลองจากคลิป)
+            // รายชื่อผู้รับบริการที่เคยบันทึกไว้
             Card(
               elevation: 0,
               color: Colors.grey.shade100,
@@ -101,7 +101,7 @@ class SelectPatientScreen extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 onTap: () {
-                  // TODO: ไปหน้ากำหนดวัน เวลา และสถานที่นัดหมาย
+                  // ไปหน้ากำหนดวัน เวลา และสถานที่นัดหมาย
                   Navigator.push(
                     context,
                     MaterialPageRoute(

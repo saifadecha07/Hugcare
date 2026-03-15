@@ -31,7 +31,7 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // อัปโหลดรูปโปรไฟล์ (จำลอง UI)
+            // อัปโหลดรูปโปรไฟล์
             Center(
               child: Stack(
                 alignment: Alignment.bottomRight,
@@ -93,7 +93,7 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
             ),
             const SizedBox(height: 16),
 
-            // แถบเลื่อนประเมินสุขภาพ (เหมือนในคลิป)
+            // แถบเลื่อนประเมินสุขภาพ
             const Row(
               children: [
                 Icon(Icons.monitor_heart_outlined, color: Colors.grey),
@@ -134,7 +134,7 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // TODO: บันทึกข้อมูลแล้วกลับไปหน้าก่อนหน้า
+                  // บันทึกข้อมูลแล้วกลับไปหน้าก่อนหน้า
                   Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
@@ -160,7 +160,7 @@ class _AddPatientScreenState extends State<AddPatientScreen> {
     );
   }
 
-  // ฟังก์ชันสร้างช่องกรอกข้อความเพื่อประหยัดโค้ด
+  // ฟังก์ชันสร้างช่องกรอกข้อความ
   Widget _buildTextField(
     IconData icon,
     String label, {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'tracking_screen.dart';
 
-// สร้างโครงสร้างข้อมูลจำลองสำหรับ Caregiver
+// สร้างโครงสร้างข้อมูล Caregiver
 class Caregiver {
   final String name;
   final int age;
@@ -23,7 +23,7 @@ class _CaregiverSwipeScreenState extends State<CaregiverSwipeScreen> {
   final PageController _pageController = PageController();
   int _currentIndex = 0;
 
-  // ข้อมูลจำลองอ้างอิงจากในคลิป
+  // ข้อมูลปลอม
   final List<Caregiver> _caregivers = [
     Caregiver('มายด์', 23, 4.8, 150, 21),
     Caregiver('ฝน', 25, 4.6, 180, 15),
@@ -137,7 +137,7 @@ class _CaregiverSwipeScreenState extends State<CaregiverSwipeScreen> {
             child: PageView.builder(
               controller: _pageController,
               physics:
-                  const NeverScrollableScrollPhysics(), // (หรือเปิดไว้ถ้าอยากให้เอานิ้วปัดได้)
+                  const NeverScrollableScrollPhysics(), // (เปิดไว้ถ้าอยากให้เอานิ้วปัดได้)
               onPageChanged: (index) {
                 setState(() {
                   _currentIndex = index;
