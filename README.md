@@ -23,7 +23,7 @@
   <summary><b>Click here to view video</b></summary>
   <br>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/5bf5b675-deef-43fd-9a44-12803697937b" width="400">
+    <img src="[https://github.com/user-attachments/assets/5bf5b675-deef-43fd-9a44-12803697937b](https://github.com/user-attachments/assets/3aaf1ada-4adf-43a9-a721-f3c8dd908f02)" width="400">
   </p>
 </details>
 
