@@ -6,7 +6,8 @@
 
 **HUGCARE (Care with Heart)** คือแอปพลิเคชันต้นแบบ (Prototype) สำหรับการจองและคัดเลือกผู้ดูแล (Caregiver) เพื่อดูแลผู้สูงอายุหรือผู้ป่วย 
 เข้ารอบ 30 team สุดท้าย ของ TU Start up2026<br>
-<p align="center">
+# pitching video
+<p align="left">
   <a href="https://youtu.be/QTJNVsvZN4E" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
   </a>
