@@ -18,12 +18,12 @@
 - **Real-time Tracking:** หน้าจอติดตามสถานะการทำงานของผู้ดูแลแบบ Timeline (เช่น กำลังเดินทาง, ถึงที่หมาย)
 - **In-App Chat:** ระบบส่งข้อความสนทนา (Chat Room) ระหว่างผู้รับบริการและผู้ดูแลโดยตรง
 ---
-##  demo video 
+##  demo 
 <details>
   <summary><b>Click here to view video</b></summary>
   <br>
   <p align="center">
-    <img src="https://github.com/user-attachments/assets/5bf5b675-deef-43fd-9a44-12803697937b" width="800">
+    <img src="https://github.com/user-attachments/assets/5bf5b675-deef-43fd-9a44-12803697937b" width="400">
   </p>
 </details>
 ---
