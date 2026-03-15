@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
   </a>
 </p>
----
+
 
 ##  Features (จุดเด่นของแอปพลิเคชัน)
 
@@ -22,7 +22,7 @@
 - **Swipe-to-Match Caregiver:** การเลือกผู้ดูแลสไตล์แอปหาคู่ (Tinder-style swipe) ปัดขวาเพื่อเลือก ปัดซ้ายเพื่อข้าม แสดงเรตติ้งและราคา
 - **Real-time Tracking:** หน้าจอติดตามสถานะการทำงานของผู้ดูแลแบบ Timeline (เช่น กำลังเดินทาง, ถึงที่หมาย)
 - **In-App Chat:** ระบบส่งข้อความสนทนา (Chat Room) ระหว่างผู้รับบริการและผู้ดูแลโดยตรง
----
+
 ##  demo 
 <details>
   <summary><b>Click here to view screenshot</b></summary>
